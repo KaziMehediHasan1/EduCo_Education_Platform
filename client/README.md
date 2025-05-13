@@ -1,0 +1,1 @@
+EduCo is a course selling web application. that help more 1Lakh student of a 

@@ -1,0 +1,31 @@
+$Primary-color: #ff9500;
+@keyframes underlineAnime {
+  0% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+.HomeBtn {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: $Primary-color;
+    transition: none;
+  }
+
+  &:hover::after {
+    animation: underlineAnime 2s ease-in-out 1s forwards;
+  }
+}
