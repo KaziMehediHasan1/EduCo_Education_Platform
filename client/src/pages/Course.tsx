@@ -27,7 +27,6 @@ const Course = () => {
         {/* COURSE SECTION */}
         <CommonWrapper>
           <div className="bg-white p-4 sm:p-6 rounded-[8px]">
-            {/* FIRST COURSE */}
             <div>
               <Title
                 header="Web Design Fundamentals"
@@ -110,14 +109,7 @@ const Course = () => {
                 </div>
               </div>
             </div>
-            {/* SECOND COURSE */}
-            <div></div>
-            {/* THIRD COURSE */}
-            <div></div>
-            {/* FOURTH COURSE */}
-            <div></div>
-            {/* FIFTH COURSE */}
-            <div></div>
+            
           </div>
         </CommonWrapper>
       </div>

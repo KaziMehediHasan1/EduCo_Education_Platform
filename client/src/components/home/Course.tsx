@@ -98,7 +98,7 @@ const Course = () => {
                       <button className="sm:text-[0.8rem] md:text-[1rem] text-[0.7rem] bg-[var(--color-cards)] px-4 py-1.5 rounded-[8px]">
                         {cards?.week}
                       </button>
-                      <button className="bg-[var(--color-cards)] px-4 py-1.5 sm:text-[0.8rem] md:text-[1rem] text-[0.7rem]  rounded-[8px]">
+                      <button className="bg-[var(--color-cards)] px-4 py-1.5 sm:text-[0.8rem] md:text-[1rem] text-[0.7rem] rounded-[8px]">
                         {cards?.level}
                       </button>
                     </div>

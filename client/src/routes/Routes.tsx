@@ -7,6 +7,7 @@ import App from "@/pages/App";
 import About from "@/pages/About";
 import Pricing from "@/pages/Pricing";
 import Contact from "@/pages/Contact";
+import Course_Details from "@/pages/Course_Details";
 
 const routes = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const routes = createBrowserRouter([
       {
         path: "/course",
         element: <Course />,
+      },
+      {
+        path: "/course-details",
+        element: <Course_Details />,
       },
       {
         path: "/about",
