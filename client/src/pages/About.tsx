@@ -1,4 +1,5 @@
 import Achievements from "@/components/about/Achievements";
+import Banner from "@/components/about/Banner";
 import Goals from "@/components/about/Goals";
 import CommonWrapper from "@/wrapper/CommonWrapper";
 
@@ -7,7 +8,7 @@ const About = () => {
     <div>
       <CommonWrapper>
         {/* HEADER TEXT SECTION */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 justify-self-stretch space-y-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 justify-self-stretch space-y-3 mt-10">
           <h1 className="text-[20px] sm:text-[35px] font-semibold leading-[150%] inline-block">
             About Skillbridge
           </h1>
@@ -21,13 +22,11 @@ const About = () => {
         </div>
       </CommonWrapper>
       {/* DIVIDER */}
-      <div className="max-w-[95%] mx-auto h-[1px] bg-[var(--color-underline)]" />
+      <div className="max-w-[95%] mx-auto h-[1px] bg-[var(--color-underline)] my-5" />
       <CommonWrapper>
-        {/* ACHIEVEMENTS SECTION */}
         <Achievements />
-        {/* GOAL SECTION */}
         <Goals />
-        
+        <Banner />
       </CommonWrapper>
     </div>
   );

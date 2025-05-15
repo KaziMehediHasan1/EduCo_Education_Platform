@@ -9,7 +9,7 @@ const Course = () => {
     <div>
       <CommonWrapper>
         {/* HEADER TEXT SECTION */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 justify-self-stretch space-y-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 justify-self-stretch space-y-3 mt-10">
           <h1 className="text-[20px] sm:text-[35px] font-semibold leading-[150%] inline-block">
             Online Courses on Design and Development
           </h1>
@@ -22,7 +22,7 @@ const Course = () => {
           </p>
         </div>
       </CommonWrapper>
-      <div className="max-w-[95%] mx-auto h-[1px] bg-[var(--color-underline)]" />
+      <div className="max-w-[95%] mx-auto h-[1px] bg-[var(--color-underline)] my-5" />
       {/* COURSE SECTION */}
       <CommonWrapper>
         <div className="bg-white p-4 sm:p-6 rounded-[8px]">
