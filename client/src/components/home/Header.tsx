@@ -1,4 +1,5 @@
 import Logo from "@/assets/Icon/Icon.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -31,12 +32,12 @@ const Header = () => {
 
         {/* Buttons */}
         <div className="flex flex-wrap justify-center sm:gap-4 gap-2 mt-6">
-          <button className="bg-[var(--color-bgPrimary)] text-white text-xs sm:text-sm py-2 px-4 sm:py-3 sm:px-6 rounded-[8px] hover:bg-[var(--color-hover)] hover:text-black transition-all duration-200 cursor-pointer">
+          <Link to="/course" className="bg-[var(--color-bgPrimary)] text-white text-xs sm:text-sm py-2 px-4 sm:py-3 sm:px-6 rounded-[8px] hover:bg-[var(--color-hover)] hover:text-black transition-all duration-200 cursor-pointer">
             Explore Courses
-          </button>
-          <button className="bg-white text-xs sm:text-sm py-2 px-4 sm:py-3 sm:px-6 rounded-[8px] border hover:bg-gray-100 transition-all duration-200 cursor-pointer">
+          </Link>
+          <Link to="/pricing" className="bg-white text-xs sm:text-sm py-2 px-4 sm:py-3 sm:px-6 rounded-[8px] border hover:bg-gray-100 transition-all duration-200 cursor-pointer">
             View Pricing
-          </button>
+          </Link>
         </div>
       </div>
     </div>
