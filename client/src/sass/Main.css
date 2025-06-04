@@ -8,11 +8,12 @@
     width: 0%;
   }
 }
-.HomeBtn {
+.active-style {
   position: relative;
   display: inline-block;
+  font-weight: 600;
 }
-.HomeBtn::after {
+.active-style::after {
   content: "";
   position: absolute;
   bottom: -2px;
@@ -22,6 +23,6 @@
   background-color: #ff9500;
   transition: none;
 }
-.HomeBtn:hover::after {
+.activeHover:hover::after {
   animation: underlineAnime 2s ease-in-out 1s forwards;
 }/*# sourceMappingURL=Main.css.map */

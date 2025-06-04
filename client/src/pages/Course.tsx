@@ -3,8 +3,13 @@ import imag2 from "@/assets/Image/Image (2).png";
 import imag3 from "@/assets/Image/Image (3).png";
 import Title from "@/components/shared/Title";
 import CommonWrapper from "@/wrapper/CommonWrapper";
+import { useNavigate } from "react-router-dom";
 
 const Course = () => {
+  const navigate = useNavigate();
+  const handleButton = () => {
+    navigate(`/course-details/${5}`);
+  };
   return (
     <div>
       <CommonWrapper>
@@ -31,6 +36,7 @@ const Course = () => {
               header="Web Design Fundamentals"
               subHeader="Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills to create visually appealing and user-friendly websites."
               button="View Course"
+              eventHandler={handleButton}
             />
             {/* IMAGES */}
             <div className="space-y-4">

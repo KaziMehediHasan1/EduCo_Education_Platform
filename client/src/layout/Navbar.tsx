@@ -3,6 +3,7 @@ import Menubar from "@/assets/Icon/Menu.png";
 import CommonWrapper from "@/wrapper/CommonWrapper";
 import { NavLink } from "react-router-dom";
 import Ad from "./Ad";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -12,61 +13,61 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-[45px]">
             {/** LOGO **/}
-            <div>
+            <Link to="/">
               <img
                 src={Logo}
                 alt="Logo"
                 className="max-w-8 sm:max-w-12 max-h-10 rounded-[8px] p-0.5 bg-[var(--color-bgPrimary)]"
               />
-            </div>
+            </Link>
 
             {/* NAV-LINK */}
             <div className="md:flex items-center gap-[20px] hidden">
               <NavLink
-                className={(isActive) =>
+                className={({ isActive }) =>
                   isActive
-                    ? "text-sm leading-[150%] text-[var(--color-textColor)] bg-[var(--color-bgOne)] rounded-[8px]"
-                    : "text-sm leading-[150%] text-[var(--color-textColor)] HomeBtn"
+                    ? "text-sm leading-[150%] text-[var(--color-textColor)] bg-[var(--color-bgOne)]  space-y-3 rounded-[8px] active-style"
+                    : "text-sm leading-[150%]  "
                 }
                 to="/"
               >
                 Home
               </NavLink>
               <NavLink
-                className={(isActive) =>
+                className={({ isActive }) =>
                   isActive
-                    ? "text-sm leading-[150%] text-[var(--color-textColor)] bg-[var(--color-bgOne)] rounded-[8px]"
-                    : "text-sm leading-[150%] text-[var(--color-textColor)]"
+                    ? "text-sm leading-[150%] text-[var(--color-textColor)] bg-[var(--color-bgOne)]  space-y-3 rounded-[8px] active-style"
+                    : "text-sm leading-[150%]  "
                 }
                 to="/course"
               >
                 Courses
               </NavLink>
               <NavLink
-                className={(isActive) =>
+                className={({ isActive }) =>
                   isActive
-                    ? "text-sm leading-[150%] text-[var(--color-textColor)] bg-[var(--color-bgOne)] rounded-[8px] "
-                    : "text-sm leading-[150%] text-[var(--color-textColor)]"
+                    ? "text-sm leading-[150%] text-[var(--color-textColor)] bg-[var(--color-bgOne)]  space-y-3 rounded-[8px] active-style"
+                    : "text-sm leading-[150%]  "
                 }
                 to="/about"
               >
                 About us
               </NavLink>
               <NavLink
-                className={(isActive) =>
-                  isActive
-                    ? "text-sm leading-[150%] text-[var(--color-textColor)] bg-[var(--color-bgOne)] rounded-[8px] "
-                    : "text-sm leading-[150%] text-[var(--color-textColor)]"
-                }
+              className={({ isActive }) =>
+                isActive
+                  ? "text-sm leading-[150%] text-[var(--color-textColor)] bg-[var(--color-bgOne)]  space-y-3 rounded-[8px] active-style"
+                  : "text-sm leading-[150%]  "
+              }
                 to="/pricing"
               >
                 Pricing
               </NavLink>
               <NavLink
-                className={(isActive) =>
+               className={({ isActive }) =>
                   isActive
-                    ? "text-sm leading-[150%] text-[var(--color-textColor)] bg-[var(--color-bgOne)] rounded-[8px] "
-                    : "text-sm leading-[150%] text-[var(--color-textColor)]"
+                    ? "text-sm leading-[150%] text-[var(--color-textColor)] bg-[var(--color-bgOne)]  space-y-3 rounded-[8px] active-style"
+                    : "text-sm leading-[150%]  "
                 }
                 to="/contact"
               >
