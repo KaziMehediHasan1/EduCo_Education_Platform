@@ -1,19 +1,35 @@
 {
+  "name": "backend-project-setup",
+  "version": "1.0.0",
+  "main": "app.ts",
+  "scripts": {
+    "build": "tsc",
+    "start:dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier . --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^4.21.2",
     "express-async-errors": "^3.1.1",
     "helmet": "^8.1.0",
-    "mongoose": "^8.15.0",
+    "mongodb": "^6.16.0",
+    "mongoose": "^8.15.1",
     "morgan": "^1.10.0",
+    "uuid": "^11.1.0",
     "zod": "^3.24.4"
   },
   "devDependencies": {
     "@types/cors": "^2.8.18",
     "@types/express": "^5.0.2",
-    "@types/node": "^22.15.18",
+    "@types/node": "^22.15.29",
     "eslint": "^9.27.0",
+    "nodemon": "^3.1.10",
     "prettier": "^3.5.3",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.3"
