@@ -1,11 +1,12 @@
 import express, { Application } from "express";
 import cors from "cors";
+import router from "./routes/route";
 const app: Application = express();
 app.use(express.json());
 
 app.use(
   cors({
-    origin: ["*"],
+    origin: ["http://localhost:5000", "*"],
     methods: ["GET", "PATCH", "DELETE", "POST", "PUT"],
     credentials: true,
   })
@@ -13,6 +14,5 @@ app.use(
 app.get("/", (req, res) => {
   res.send("Home Page");
 });
-app.use("/api/");
-
+app.use("/api/v1", router);
 export default app;
