@@ -5,4 +5,5 @@ dotenv.config({ path: path.join(process.cwd(), ".env") });
 export default {
   dbUrl: process.env.EDUCO_DATABASE_URL,
   port: process.env.PORT,
+  saltRounds: process.env.PASS_SALT,
 };
