@@ -4,7 +4,7 @@ import { IUser, Role } from "./user.type";
 const userSchema = new mongoose.Schema<IUser>(
   {
     name: { type: String, required: true },
-    role: { type: String, enum: Object.values(Role), default: Role.student },
+    role: { type: String, enum: Object.values(Role), default: Role.STUDENT },
     uid: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     image: {

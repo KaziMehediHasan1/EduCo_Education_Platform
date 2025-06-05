@@ -11,8 +11,8 @@ app.use(
     credentials: true,
   })
 );
+app.use("/api/v1", router);
 app.get("/", (req, res) => {
   res.send("Home Page");
 });
-app.use("/api/v1", router);
 export default app;

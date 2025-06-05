@@ -1,7 +1,7 @@
 export enum Role {
-  student = "STUDENT",
-  instructor = "INSTRUCTOR",
-  admin = "ADMIN",
+  STUDENT = "STUDENT",
+  INSTRUCTOR = "INSTRUCTOR",
+  ADMIN = "ADMIN",
 }
 export interface IUser {
   name: string;
