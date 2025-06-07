@@ -21,10 +21,44 @@ const createACourse = catchAsync(async (req, res) => {
 });
 
 // GET ALL COURSES
-const getAllCourses = catchAsync(async,(req,res)=>{
-  
-})
+const getAllCourses = catchAsync(async (req, res) => {
+  const result = await courseServices.getCourses();
+  if (!result) {
+    sendResponse(res, {
+      statusCode: 404,
+      message: "not found course",
+      success: false,
+    });
+  }
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    data: result,
+    message: "course find successfully",
+  });
+});
 
-const courseController = {
+// GET COURSE BY ID
+const getCourseById = catchAsync(async (req, res) => {
+  const id = req.params.id;
+  const result = await courseServices.getCouresById(id);
+  if (!result) {
+    sendResponse(res, {
+      statusCode: 404,
+      success: false,
+      message: "this course not finding",
+    });
+  }
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    data: result,
+    message: "get course succesfully",
+  });
+});
+
+export const courseController = {
   createACourse,
+  getAllCourses,
+  getCourseById,
 };

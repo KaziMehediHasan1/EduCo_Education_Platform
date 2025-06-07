@@ -9,7 +9,7 @@ export enum LessonType {
 export type TLesson = {
   title: string;
   type: LessonType;
-  videoURL?: string;       
+  videoURL?: string;     
   duration?: number;       
   isPreview?: boolean;      
   content?: string;         
@@ -32,7 +32,6 @@ export type TCourse = {
   instructor: mongoose.Types.ObjectId; 
   sections: Section[]; 
 };
-
 
 type QuizQuestion = {
   question: string;
