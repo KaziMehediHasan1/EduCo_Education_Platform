@@ -44,6 +44,13 @@ const getAUser = catchAsync(async (req, res) => {
 const deleteAUser = catchAsync(async (req, res) => {
   const id = req.params.id;
   const result = await userServices.deleteAUser(id);
+  if (!result) {
+    sendResponse(res, {
+      statusCode: 404,
+      success: false,
+      message: "user not found",
+    });
+  }
   sendResponse(res, {
     statusCode: 200,
     success: true,
@@ -52,10 +59,9 @@ const deleteAUser = catchAsync(async (req, res) => {
   });
 });
 
-
 export const userControler = {
   createAUser,
   getUsers,
   getAUser,
-  deleteAUser
+  deleteAUser,
 };
