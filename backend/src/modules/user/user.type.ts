@@ -3,6 +3,7 @@ export enum Role {
   INSTRUCTOR = "INSTRUCTOR",
   ADMIN = "ADMIN",
 }
+export type changeRoleReqStatus = "pending" | "approved" | "rejected" | null;
 export interface IUser {
   name: string;
   role: Role;
@@ -10,6 +11,7 @@ export interface IUser {
   email: string;
   image?: string;
   password: string;
+  changeRoleReq: changeRoleReqStatus;
   createdAt?: Date;
   updatedAt?: Date;
 }
