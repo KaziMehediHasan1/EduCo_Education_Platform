@@ -13,6 +13,11 @@ const userSchema = new mongoose.Schema<IUser>(
         "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png",
     },
     password: { type: String, required: true },
+    changeRoleReq: {
+      type: String,
+      enum: ["pending", "approved", "rejected", null],
+      default: null,
+    },
   },
   { timestamps: true }
 );

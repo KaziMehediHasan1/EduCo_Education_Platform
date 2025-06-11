@@ -15,6 +15,24 @@ const createAUser = catchAsync(async (req, res) => {
   }
 });
 
+// LOGIN ME
+const loginUser = catchAsync(async (req, res) => {
+  const id = req.params.id;
+  const result = userServices.loginUser(id);
+  if (!result) {
+    sendResponse(res, {
+      statusCode: 404,
+      success: false,
+      message: "Login Unsuccessful",
+    });
+  }
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    data: result,
+    message: "Login Successfully done",
+  });
+});
 // GET USERS
 const getUsers = catchAsync(async (req, res) => {
   const result = await userServices.getUser();
@@ -59,9 +77,31 @@ const deleteAUser = catchAsync(async (req, res) => {
   });
 });
 
+// BECOME A INSTRUCTOR
+const reqInstructor = catchAsync(async (req, res) => {
+  const id = req.params.id;
+  const payload = req.body;
+  const result = await userServices.reqInstructor(id, payload);
+  if (!result) {
+    sendResponse(res, {
+      statusCode: 404,
+      success: false,
+      message: "try again, not pass your request!",
+    });
+  }
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    data: result,
+    message: "your request is successfull",
+  });
+});
+
 export const userControler = {
   createAUser,
+  loginUser,
   getUsers,
   getAUser,
   deleteAUser,
+  reqInstructor,
 };

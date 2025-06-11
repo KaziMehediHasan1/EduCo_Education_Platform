@@ -2,6 +2,7 @@ import config from "../../config";
 import { v4 as uuidv4 } from "uuid";
 import bcrypt from "bcryptjs";
 import userModel from "./user.model";
+import { changeRoleReqStatus } from "./user.type";
 
 // CREATE NEW USER
 const createUser = async (payload: any) => {
@@ -11,6 +12,12 @@ const createUser = async (payload: any) => {
   payload.password = hashedPassword;
   payload.uid = uid;
   const result = await userModel.create(payload);
+  return result;
+};
+
+// LOGIN ME
+const loginUser = async (id: string) => {
+  const result = await userModel.findOne({ _id: id });
   return result;
 };
 
@@ -32,9 +39,21 @@ const deleteAUser = async (id: string) => {
   return result;
 };
 
+// BECOME A INSTRUCTOR
+const reqInstructor = async (id: string, payload: changeRoleReqStatus) => {
+  const result = userModel.findByIdAndUpdate(
+    { _id: id },
+    { changeRoleReq: payload },
+    { new: true }
+  );
+  return result;
+};
+
 export const userServices = {
   createUser,
+  loginUser,
   getUser,
   getUserById,
-  deleteAUser
+  deleteAUser,
+  reqInstructor,
 };
