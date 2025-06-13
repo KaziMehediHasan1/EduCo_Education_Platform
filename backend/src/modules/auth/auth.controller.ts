@@ -6,6 +6,5 @@ const loginUser = (payload: { email: string; password: sring }) => {
 };
 
 export const authController = {
-  loginUser,
-  
+  loginUser
 };
