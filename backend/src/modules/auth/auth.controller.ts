@@ -1,6 +1,6 @@
 import { authServices } from "./auth.service";
 
-const loginUser = (payload: { email: string; password: sring }) => {
+const loginUser = (payload: { email: string; password: string }) => {
   const result = authServices.loginUser(payload);
   
 };
