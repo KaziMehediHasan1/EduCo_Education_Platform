@@ -8,6 +8,7 @@ import About from "@/pages/About";
 import Pricing from "@/pages/Pricing";
 import Contact from "@/pages/Contact";
 import Course_Details from "@/pages/Course_Details";
+import DashboardLayout from "@/layout/DashboardLayout";
 
 const routes = createBrowserRouter([
   {
@@ -46,6 +47,17 @@ const routes = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+    ],
+  },
+  // DASHBOARD LAYOUT
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [
+      {
+        index: true,
+        element: "dashboard main",
       },
     ],
   },
